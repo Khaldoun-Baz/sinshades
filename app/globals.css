@@ -134,18 +134,14 @@ input {
 }
 .brand-logo--nav {
   width: 172px;
-  padding: 9px 16px 10px;
-  border: 1px solid rgb(255 253 250 / 22%);
-  border-radius: 999px;
-  background: var(--pink);
-  box-shadow: 0 12px 35px rgb(107 13 64 / 12%);
+  padding: 7px 0;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    opacity 0.3s ease;
 }
 .brand-logo--nav:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 42px rgb(107 13 64 / 20%);
+  opacity: 0.78;
 }
 .nav-note {
   display: flex;
@@ -1071,9 +1067,7 @@ footer {
 }
 .brand-logo--footer {
   width: 210px;
-  padding: 12px 20px 13px;
-  border-radius: 999px;
-  background: var(--pink);
+  padding: 8px 0;
 }
 footer > p {
   margin: 0;
@@ -1352,7 +1346,7 @@ footer > div {
   }
   .brand-logo--nav {
     width: 142px;
-    padding: 8px 13px 9px;
+    padding: 6px 0;
   }
   .nav-link {
     font-size: 0;

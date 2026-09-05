@@ -68,7 +68,7 @@ export default function Home() {
           aria-label="SinShade home"
         >
           <Image
-            src="/logo-transparent.svg"
+            src="/logo-transparent-pink.svg"
             alt="SinShade"
             width={407}
             height={106}
@@ -388,7 +388,7 @@ export default function Home() {
           aria-label="SinShade home"
         >
           <Image
-            src="/logo-transparent.svg"
+            src="/logo-transparent-pink.svg"
             alt="SinShade"
             width={407}
             height={106}
