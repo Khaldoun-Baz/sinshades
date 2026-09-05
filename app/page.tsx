@@ -49,13 +49,32 @@ export default function Home() {
   return (
     <main>
       <div className="intro" aria-hidden="true">
-        <span className="intro-mark">SinShade</span>
+        <Image
+          className="intro-mark"
+          src="/logo-transparent.svg"
+          alt=""
+          width={407}
+          height={106}
+          priority
+          unoptimized
+        />
         <span className="intro-line" />
       </div>
 
       <nav className="site-nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="SinShade home">
-          SinShade<span>®</span>
+        <a
+          className="brand-logo brand-logo--nav"
+          href="#top"
+          aria-label="SinShade home"
+        >
+          <Image
+            src="/logo-transparent.svg"
+            alt="SinShade"
+            width={407}
+            height={106}
+            priority
+            unoptimized
+          />
         </a>
         <div className="nav-note">
           <span className="status-dot" /> Coming soon
@@ -189,7 +208,14 @@ export default function Home() {
             <span>Organic-inspired</span>
             <span>Made with feeling</span>
           </div>
-          <span className="founder-signature">SinShade</span>
+          <Image
+            className="founder-signature"
+            src="/logo-transparent.svg"
+            alt=""
+            width={407}
+            height={106}
+            unoptimized
+          />
         </div>
 
         <div className="founder-marquee" aria-hidden="true">
@@ -337,8 +363,18 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="wordmark wordmark--footer" href="#top">
-          SinShade<span>®</span>
+        <a
+          className="brand-logo brand-logo--footer"
+          href="#top"
+          aria-label="SinShade home"
+        >
+          <Image
+            src="/logo-transparent.svg"
+            alt="SinShade"
+            width={407}
+            height={106}
+            unoptimized
+          />
         </a>
         <p>Organic-inspired color for every shade of you.</p>
         <div>
