@@ -306,33 +306,6 @@ input {
 .reveal--4 {
   animation-delay: 2.86s;
 }
-.hero-stamp {
-  position: absolute;
-  right: clamp(22px, 4.5vw, 80px);
-  bottom: clamp(70px, 10vh, 120px);
-  width: 120px;
-  height: 120px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgb(255 253 250 / 65%);
-  border-radius: 50%;
-  color: var(--white);
-  background: rgb(210 20 125 / 72%);
-  box-shadow: 0 12px 40px rgb(90 13 54 / 20%);
-  backdrop-filter: blur(10px);
-}
-.hero-stamp span {
-  position: absolute;
-  inset: 9px;
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-align: center;
-  animation: spin 18s linear infinite;
-}
-.hero-stamp svg {
-  width: 26px;
-}
 .hero-index {
   position: absolute;
   inset: auto clamp(22px, 4vw, 72px) 24px;
@@ -1158,11 +1131,6 @@ footer > div {
     transform: translateY(5px);
   }
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes float {
   50% {
     transform: translateY(-16px) rotate(2deg);
@@ -1397,15 +1365,6 @@ footer > div {
     max-width: 92%;
     margin-top: 25px;
     line-height: 1.6;
-  }
-  .hero-stamp {
-    width: 82px;
-    height: 82px;
-    right: 20px;
-    bottom: 410px;
-  }
-  .hero-stamp span {
-    font-size: 0.4rem;
   }
   .hero-index {
     display: none;

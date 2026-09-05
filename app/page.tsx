@@ -113,14 +113,6 @@ export default function Home() {
           </a>
         </div>
 
-        <div
-          className="hero-stamp reveal reveal--4"
-          aria-label="Organic inspired beauty"
-        >
-          <span>ORGANIC INSPIRED • MADE TO GLOW • </span>
-          <Sparkles aria-hidden="true" />
-        </div>
-
         <div className="hero-index" aria-hidden="true">
           <span>SS / 01</span>
           <span>BEIRUT — 2026</span>
