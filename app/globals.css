@@ -184,6 +184,22 @@ input {
   inset: 0;
   z-index: -2;
 }
+.hero-media::after {
+  content: '';
+  position: absolute;
+  inset: -30% auto -30% -35%;
+  width: 24%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 34%),
+    transparent
+  );
+  filter: blur(14px);
+  transform: skewX(-13deg);
+  animation: light-sweep 8s ease-in-out 3.2s infinite;
+  pointer-events: none;
+}
 .hero-media img {
   width: 100%;
   height: 100%;
@@ -402,6 +418,170 @@ input {
 .manifesto-body li svg {
   width: 17px;
   color: var(--pink);
+}
+
+.founder-story {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(430px, 0.92fr);
+  overflow: hidden;
+  background: var(--pink);
+  color: var(--cream-light);
+}
+.founder-portrait {
+  position: relative;
+  min-height: 920px;
+  overflow: hidden;
+  background: #8f0b52;
+  clip-path: inset(0 round 0 0 44% 0);
+}
+.founder-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 68%, rgb(91 4 49 / 40%)),
+    linear-gradient(0deg, rgb(64 20 44 / 24%), transparent 35%);
+  pointer-events: none;
+}
+.founder-portrait img {
+  object-fit: cover;
+  object-position: 52% center;
+  animation: portrait-breathe 11s ease-in-out infinite alternate;
+}
+.founder-image-label {
+  position: absolute;
+  left: 25px;
+  bottom: 30px;
+  z-index: 2;
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.founder-seal {
+  position: absolute;
+  right: -54px;
+  top: 13%;
+  z-index: 3;
+  width: 122px;
+  height: 122px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(254 234 200 / 60%);
+  border-radius: 50%;
+  background: rgb(210 20 125 / 76%);
+  color: var(--cream);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgb(62 5 36 / 26%);
+}
+.founder-seal span {
+  position: absolute;
+  inset: 9px;
+  font-size: 0.53rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
+  animation: spin 17s linear infinite;
+}
+.founder-seal svg {
+  width: 26px;
+}
+.founder-copy {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  padding: 110px clamp(36px, 7vw, 120px) 170px clamp(60px, 8vw, 140px);
+}
+.founder-count {
+  position: absolute;
+  top: -80px;
+  right: clamp(30px, 5vw, 80px);
+  color: rgb(255 248 234 / 58%);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+}
+.founder-copy .eyebrow {
+  color: var(--cream);
+}
+.founder-copy h2 {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(5rem, 7.6vw, 9.2rem);
+  font-weight: 500;
+  line-height: 0.72;
+  letter-spacing: -0.065em;
+}
+.founder-copy h2 em {
+  display: block;
+  margin-left: clamp(18px, 4vw, 60px);
+  color: var(--cream);
+  font-weight: 400;
+}
+.founder-copy > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 46px 0 38px clamp(18px, 4vw, 60px);
+  color: rgb(255 248 234 / 76%);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.founder-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: clamp(18px, 4vw, 60px);
+}
+.founder-note span {
+  padding: 9px 12px;
+  border: 1px solid rgb(254 234 200 / 30%);
+  border-radius: 999px;
+  color: rgb(255 248 234 / 80%);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.founder-signature {
+  display: block;
+  width: max-content;
+  margin: 48px 0 0 auto;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.2rem, 4vw, 4.8rem);
+  font-style: italic;
+  color: var(--cream);
+  transform: rotate(-7deg);
+  opacity: 0.8;
+}
+.founder-marquee {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  width: max-content;
+  padding: 16px 0;
+  border-block: 1px solid rgb(254 234 200 / 22%);
+  background: rgb(113 7 63 / 38%);
+  backdrop-filter: blur(8px);
+  animation: founder-ticker 28s linear infinite;
+}
+.founder-marquee div {
+  display: flex;
+  align-items: center;
+}
+.founder-marquee span {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  white-space: nowrap;
+}
+.founder-marquee i {
+  margin: 0 34px;
+  color: var(--cream);
+  font-style: normal;
 }
 
 .collection {
@@ -855,6 +1035,21 @@ footer > div {
     transform: scale(1.035);
   }
 }
+@keyframes light-sweep {
+  0%,
+  36% {
+    left: -35%;
+    opacity: 0;
+  }
+  48% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
 @keyframes dot-pulse {
   50% {
     opacity: 0.55;
@@ -892,6 +1087,64 @@ footer > div {
     rotate: 12deg;
   }
 }
+@keyframes portrait-breathe {
+  to {
+    transform: scale(1.035) translateY(-0.6%);
+  }
+}
+@keyframes founder-ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-rise {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes founder-unmask {
+  from {
+    clip-path: inset(12% 10% 12% 10% round 180px);
+    transform: scale(0.92);
+  }
+  to {
+    clip-path: inset(0 round 0 0 44% 0);
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .manifesto h2,
+  .manifesto-body,
+  .founder-copy,
+  .section-heading,
+  .product-card,
+  .ingredient-copy {
+    animation-name: scroll-rise;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 32%;
+  }
+  .product-card:nth-child(2) {
+    animation-range: entry 12% cover 36%;
+  }
+  .product-card:nth-child(3) {
+    animation-range: entry 18% cover 42%;
+  }
+  .founder-portrait {
+    animation-name: founder-unmask;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 38%;
+  }
+}
 
 @media (max-width: 980px) {
   .site-nav {
@@ -917,6 +1170,16 @@ footer > div {
   }
   .manifesto-body {
     padding-left: 10vw;
+  }
+  .founder-story {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+  .founder-portrait {
+    min-height: 780px;
+  }
+  .founder-copy {
+    padding-left: 70px;
+    padding-right: 38px;
   }
   .product-copy {
     grid-template-columns: 1fr;
@@ -1022,6 +1285,39 @@ footer > div {
     padding-left: 14vw;
     margin-top: 55px;
   }
+  .founder-story {
+    display: flex;
+    min-height: auto;
+    flex-direction: column;
+  }
+  .founder-portrait {
+    min-height: 690px;
+    clip-path: inset(0 round 0 0 50px 50px);
+  }
+  .founder-portrait img {
+    object-position: 50% center;
+  }
+  .founder-seal {
+    right: 20px;
+    top: auto;
+    bottom: -46px;
+  }
+  .founder-copy {
+    padding: 125px 24px 150px;
+  }
+  .founder-count {
+    top: 56px;
+  }
+  .founder-copy h2 {
+    font-size: clamp(4.6rem, 21vw, 7.4rem);
+  }
+  .founder-copy > p:not(.eyebrow),
+  .founder-note {
+    margin-left: 18px;
+  }
+  .founder-image-label {
+    display: none;
+  }
   .section-heading {
     grid-template-columns: 1fr;
     margin-bottom: 50px;
@@ -1104,5 +1400,16 @@ footer > div {
   }
   .intro {
     display: none;
+  }
+  .founder-portrait,
+  .manifesto h2,
+  .manifesto-body,
+  .founder-copy,
+  .section-heading,
+  .product-card,
+  .ingredient-copy {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
   }
 }

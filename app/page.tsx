@@ -153,6 +153,61 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="founder-story" aria-labelledby="founder-title">
+        <div className="founder-portrait">
+          <Image
+            src="/images/sinshade-founder-campaign.png"
+            alt="The founder of SinShade in a fuchsia and cream beauty campaign"
+            fill
+            sizes="(max-width: 760px) 100vw, 55vw"
+          />
+          <span className="founder-image-label">
+            Founder portrait • SinShade 2026
+          </span>
+          <div className="founder-seal" aria-hidden="true">
+            <span>HER VISION • YOUR GLOW • </span>
+            <Sparkles />
+          </div>
+        </div>
+
+        <div className="founder-copy">
+          <div className="founder-count">THE FOUNDER / 01</div>
+          <p className="eyebrow">
+            <Sparkles aria-hidden="true" /> Behind the shade
+          </p>
+          <h2 id="founder-title">
+            Her vision.
+            <em>Your glow.</em>
+          </h2>
+          <p>
+            SinShade began with one belief: makeup can be gentle, expressive,
+            and completely personal. Every color is shaped by a love of radiant
+            skin, feminine confidence, and beauty that never asks you to hide.
+          </p>
+          <div className="founder-note">
+            <span>Founder-led</span>
+            <span>Organic-inspired</span>
+            <span>Made with feeling</span>
+          </div>
+          <span className="founder-signature">SinShade</span>
+        </div>
+
+        <div className="founder-marquee" aria-hidden="true">
+          <div>
+            <span>THE FACE BEHIND THE SHADE</span>
+            <i>✦</i>
+            <span>THE FACE BEHIND THE SHADE</span>
+            <i>✦</i>
+          </div>
+          <div>
+            <span>THE FACE BEHIND THE SHADE</span>
+            <i>✦</i>
+            <span>THE FACE BEHIND THE SHADE</span>
+            <i>✦</i>
+          </div>
+        </div>
+      </section>
+
       <section
         className="collection"
         id="collection"
