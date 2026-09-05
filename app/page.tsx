@@ -127,22 +127,56 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="ticker" aria-hidden="true">
-        <div className="ticker-track">
-          {Array.from({ length: 2 }).map((_, group) => (
-            <div className="ticker-group" key={group}>
-              <span>Eyes that shimmer</span>
-              <i>✦</i>
-              <span>Lips that glow</span>
-              <i>✦</i>
-              <span>Cheeks that bloom</span>
-              <i>✦</i>
-              <span>Naturally you</span>
-              <i>✦</i>
-            </div>
-          ))}
+      <section className="cinematic-reel" aria-labelledby="reel-title">
+        <div className="reel-images" aria-hidden="true">
+          <Image
+            className="reel-frame reel-frame--gloss"
+            src="/images/sinshade-lipgloss.png"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <Image
+            className="reel-frame reel-frame--founder"
+            src="/images/sinshade-founder-campaign.png"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <Image
+            className="reel-frame reel-frame--shadow"
+            src="/images/sinshade-eyeshadow.png"
+            alt=""
+            fill
+            sizes="100vw"
+          />
         </div>
-      </div>
+        <div className="reel-vignette" aria-hidden="true" />
+        <div className="reel-flare" aria-hidden="true" />
+
+        <span className="reel-chapter">Chapter I — The first drop</span>
+        <div className="reel-copy">
+          <p>SinShade presents</p>
+          <h2 id="reel-title">
+            Glow is a <em>feeling.</em>
+          </h2>
+          <span>Eyes • Lips • Cheeks • You</span>
+        </div>
+
+        <div className="reel-progress" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+        <Image
+          className="reel-logo"
+          src="/logo-transparent.svg"
+          alt=""
+          width={407}
+          height={106}
+          unoptimized
+        />
+      </section>
 
       <section className="manifesto" aria-labelledby="manifesto-title">
         <div className="manifesto-kicker">
@@ -216,21 +250,6 @@ export default function Home() {
             height={106}
             unoptimized
           />
-        </div>
-
-        <div className="founder-marquee" aria-hidden="true">
-          <div>
-            <span>THE FACE BEHIND THE SHADE</span>
-            <i>✦</i>
-            <span>THE FACE BEHIND THE SHADE</span>
-            <i>✦</i>
-          </div>
-          <div>
-            <span>THE FACE BEHIND THE SHADE</span>
-            <i>✦</i>
-            <span>THE FACE BEHIND THE SHADE</span>
-            <i>✦</i>
-          </div>
         </div>
       </section>
 
